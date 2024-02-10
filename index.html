@@ -1,0 +1,41 @@
+<!-- Este es el archivo index.html que contiene el formulario de registro -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de registro</title>
+    <!-- Aquí puedes incluir el archivo de estilos CSS que quieras -->
+    <link rel="stylesheet" href="stiles.css">
+    <!-- Aquí puedes incluir el archivo de scripts JS que quieras -->
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de registro</h1>
+        <!-- El formulario envía los datos por el método POST al archivo registro.php -->
+        <form action="registro.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*">
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Subir">
+                <input type="reset" name="reset" value="Eliminar">
+                <input type="button" name="update" value="Actualizar" onclick="actualizar()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
